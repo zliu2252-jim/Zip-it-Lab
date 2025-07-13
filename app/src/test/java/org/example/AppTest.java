@@ -37,9 +37,9 @@ class AppTest {
      */
     @Test
     void testZipFirstListShorter() {
-        List<String> a = List.of("x", "y");
+        List<String> a = List.of("c", "d");
         List<String> b = List.of("1", "2", "3", "4");
-        assertEquals(List.of("x", "1", "y", "2", "3", "4"), App.zip(a, b));
+        assertEquals(List.of("c", "1", "d", "2", "3", "4"), App.zip(a, b));
     }
 
     /**
@@ -48,7 +48,7 @@ class AppTest {
     @Test
     void testZipSecondListShorter() {
         List<String> a = List.of("x", "y", "z");
-        List<String> b = List.of("1");
-        assertEquals(List.of("x", "1", "y", "z"), App.zip(a, b));
+        List<String> b = List.of("5");
+        assertEquals(List.of("x", "5", "y", "z"), App.zip(a, b));
     }
 }
