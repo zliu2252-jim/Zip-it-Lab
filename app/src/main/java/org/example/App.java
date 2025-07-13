@@ -8,7 +8,7 @@ import java.util.List;
  * <p>
  * The main feature for this class is merging two lists by alternating their elements.
  */
-public class ListUtils {
+public class App {
 
     /**
      * Returns a new list with elements of list1 and list2 interleaved.
