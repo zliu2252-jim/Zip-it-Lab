@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Unit tests for the zip method in the main app.
  */
-class ListUtilsTest {
+class AppTest {
 
     /**
      * Tests zipping two integer lists of equal length.
@@ -16,7 +16,7 @@ class ListUtilsTest {
     void testZipWithIntegers() {
         List<Integer> nums1 = List.of(1, 3, 5, 7);
         List<Integer> nums2 = List.of(2, 4, 6, 8);
-        assertEquals(List.of(1, 2, 3, 4, 5, 6, 7, 8), ListUtils.zip(nums1, nums2));
+        assertEquals(List.of(1, 2, 3, 4, 5, 6, 7, 8), App.zip(nums1, nums2));
     }
 
     /**
@@ -28,7 +28,7 @@ class ListUtilsTest {
         List<String> colors2 = List.of("White", "Black", "Orange", "Pink", "Fuschia");
         assertEquals(
                 List.of("Red", "White", "Green", "Black", "Blue", "Orange", "Pink", "Fuschia"),
-                ListUtils.zip(colors1, colors2)
+                App.zip(colors1, colors2)
         );
     }
 
@@ -39,7 +39,7 @@ class ListUtilsTest {
     void testZipFirstListShorter() {
         List<String> a = List.of("x", "y");
         List<String> b = List.of("1", "2", "3", "4");
-        assertEquals(List.of("x", "1", "y", "2", "3", "4"), ListUtils.zip(a, b));
+        assertEquals(List.of("x", "1", "y", "2", "3", "4"), App.zip(a, b));
     }
 
     /**
@@ -49,6 +49,6 @@ class ListUtilsTest {
     void testZipSecondListShorter() {
         List<String> a = List.of("x", "y", "z");
         List<String> b = List.of("1");
-        assertEquals(List.of("x", "1", "y", "z"), ListUtils.zip(a, b));
+        assertEquals(List.of("x", "1", "y", "z"), App.zip(a, b));
     }
 }
